@@ -49,7 +49,8 @@ let TabViewPager;
 
 switch (Platform.OS) {
   case 'android':
-    TabViewPager = require('./TabViewPagerAndroid').default;
+    // switch to TabViewPagerScroll to make tab nav working on Android
+    TabViewPager = require('./TabViewPagerScroll').default; 
     break;
   case 'ios':
     TabViewPager = require('./TabViewPagerScroll').default;
